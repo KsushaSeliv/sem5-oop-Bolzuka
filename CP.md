@@ -11,92 +11,11 @@
 
 3.1 Разработка прототипа приложения “Регистрация на конференцию” на основе фрагмента технического задания с использованием ООП.
 
-"""
-#Вариативная самостоятельная работа
-#Шибаева Мария ИВТ 3 курс
-#3.1 Разработка прототипа приложения “Регистрация на конференцию” на основе фрагмента технического задания с использованием ООП.
+[Заголовок ссылки](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/3.1.py "Заголовок ссылки")
 
-import re 
+##Вывод программы
+[Вывод программы](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/Снимок%20экрана%202018-11-20%20в%2012.09.48.png "Вывод программы")
 
-"""
-Создаем класс и пустой список для логгера
-"""
+##Вывод файла [Conf_log.txt]( https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/Conf_log.txt "Conf_log.txt")
+[Вывод файла](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/Снимок%20экрана%202018-11-20%20в%2012.09.42.png "Вывод файла")
 
-class Conf():
-  log = []
-  
-  """
-  Описываем конструктор, где в качестве свойства выступает словарь с входящими полями формы 
-  """
-  def __init__(self, dict_conf):
-
-    self.f_name = dict_conf["f_name"] 
-    self.s_name = dict_conf["s_name"]
-    self.email = dict_conf["email"]
-    self.city = dict_conf["city"]
-
-  
-  """
-  Создаем свойство класса @property для поля e-mail: getter, setter
-  """
-  @property
-  def email(self):
-      return self._email
-    
-  @email.setter
-  def email(self, value):
-    pattern = r"^[a-zA-Z0-9]{1,100}[@][a-z]{2,6}\.[a-z]{2,4}"
-    number_re = re.compile(pattern)
-
-    if (not (number_re.findall(str(value)))):
-      raise ValueError('Неправильно введен адрес почты, проверьте правильность ввода!')
-    else:
-      self.log.append ("Успешно создан!")
-      self._email = value
-
-  
-  """
-  Создаем метод для получения данных из формы
-  """
-  def conf_client_info(self):
-    self.participant_info = {
-      "f_name": self.f_name,
-      "s_name": self.s_name,
-      "email": self.email,
-      "city": self.city,
-    }
-
-    return self.participant_info
-
-  """
-  Метод озвращает строковое представление объекта.
-  """
-  def __str__(self):
-    return (self.f_name + " " + self.s_name)
-
-
-"""
-Объявляем переменные для формы
-"""
-Fname = input("Введите имя:")
-Sname = input("Введите фамилию:")
-email = input("Введите почту:")
-city = input("Введите город:")
-
-info={"f_name":Fname,"s_name":Sname,"email":email, "city":city}
-
-"""
-Выводим значение полей
-"""
-g_info=Conf(info)
-print(g_info.conf_client_info())
-
-with open('Conf_log.txt', 'a') as f:
-  f.write(str(g_info.log))
-  
-"""
-
-##Conf_log.txt
-"""
-['Успешно создан!']
-"""
