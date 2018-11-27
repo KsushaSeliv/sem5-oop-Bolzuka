@@ -13,9 +13,9 @@
 
 [Заголовок ссылки](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/3.1.py "Заголовок ссылки")
 
-##Вывод программы
+## Вывод программы
 [Вывод программы](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/Снимок%20экрана%202018-11-20%20в%2012.09.48.png "Вывод программы")
 
-##Вывод файла [Conf_log.txt]( https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/Conf_log.txt "Conf_log.txt")
+## Вывод файла [Conf_log.txt](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/Conf_log.txt "Conf_log.txt")
 [Вывод файла](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/3.1/Снимок%20экрана%202018-11-20%20в%2012.09.42.png "Вывод файла")
 
