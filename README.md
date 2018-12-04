@@ -69,5 +69,5 @@ if __name__ == "__main__":
 ```        
 
         
-Вывод: [Текст ссылки](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/2.1-2.3/Record.txt "Файл Record.txt" )
+Вывод: [Файл Record.txt](https://github.com/python-advance/sem5-oop-Bolzuka/blob/master/2.1-2.3/Record.txt "Файл Record.txt" )
  
